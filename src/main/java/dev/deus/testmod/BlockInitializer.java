@@ -3,6 +3,8 @@ package dev.deus.testmod;
 import dev.deus.testmod.Blocks.FishingNetBlock;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.Block;
+import net.minecraft.core.block.tag.BlockTags;
+import net.minecraft.core.sound.BlockSounds;
 import turniplabs.halplibe.helper.BlockBuilder;
 import turniplabs.halplibe.util.ConfigHandler;
 
@@ -29,9 +31,12 @@ public class BlockInitializer {
 
 		// Creating blocks
 		BlockBuilder fishing_net_block_builder = MetalBlockBuilder
-
 			.setBlockModel(new BlockModelRenderBlocks(0))
 			.setTextures("FishingNetBlock.png")
+			.setBlockSound(BlockSounds.METAL)
+			.setHardness(1.0F)
+			.setResistance(1.0F)
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE);
 		;
 		Block fishing_net_block = new FishingNetBlock("FishingNetBlock", blockId++);
 

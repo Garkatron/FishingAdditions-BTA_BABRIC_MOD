@@ -1,5 +1,6 @@
 package dev.deus.testmod;
 
+import dev.deus.testmod.TileEntities.TileEntityFishingNetBlock;
 import net.minecraft.client.render.Texture;
 import net.minecraft.client.render.block.model.BlockModel;
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
@@ -23,9 +24,8 @@ public class ExampleMod implements ModInitializer, GameStartEntrypoint, RecipeEn
     @Override
     public void onInitialize() {
 
-
+		EntityHelper.Core.createTileEntity(TileEntityFishingNetBlock.class, "TileEntityFishingNetBlock");
 		BlockInitializer.MakeBlocks(MOD_ID);
-
 		LOGGER.info("ExampleMod initialized.");
 
 	}

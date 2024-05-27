@@ -44,7 +44,7 @@ public class FishingNetBlock extends TransparentBlockTileEntityRotatable {
 				int blockId8 = world.getBlockId(x, y - 1, z - 1);
 
 				if (blockId1 == 271 && blockId2 == 271 && blockId3 == 271 && blockId4 == 271 && blockId5 == 271 && blockId6 == 271 && blockId7 == 271 && blockId8 == 271) {
-					System.out.println("All adjacent blocks have ID 271.");
+
 					if (tile_entity_chest != null) {
 						System.out.println(tile_entity_chest.getStackInSlot(1));
 
