@@ -1,1 +1,2 @@
 tile.testmod.FishingNetBlock.name = Fishing Net Block
+tile.testmod.FishingNetBlock.desc = Automatically fishes every 5 minutes.
