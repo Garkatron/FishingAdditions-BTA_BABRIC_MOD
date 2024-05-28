@@ -10,7 +10,7 @@
 
 (_Fishing Net Block_)
 
-*[I]: Iron Ingot* - *[P]: Raw pork*
+*[I]: Iron Ingot* - *[P]: Raw fish*
  ```
   ___________
 | I | I | I |
