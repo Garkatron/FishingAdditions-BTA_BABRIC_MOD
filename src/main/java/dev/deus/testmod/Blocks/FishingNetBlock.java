@@ -25,7 +25,7 @@ public class FishingNetBlock extends TransparentBlockTileEntityRotatable {
 
 	public FishingNetBlock(String key, int id) {
 		super(key, id, Material.metal);
-		this.requiredTime = 1000L; // 1 second
+		this.requiredTime = 5 * 60 * 1000L; // 5 minutes
 	}
 
 	// Own functions
