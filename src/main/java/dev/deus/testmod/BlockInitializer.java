@@ -15,6 +15,7 @@ import static dev.deus.testmod.ExampleMod.MOD_ID;
 public class BlockInitializer {
 
 	public static int blockId;
+	public static Block fishing_net_block;
 
 	static {
 		Properties prop = new Properties();
@@ -38,7 +39,7 @@ public class BlockInitializer {
 			.setResistance(1.0F)
 			.setTags(BlockTags.MINEABLE_BY_PICKAXE);
 		;
-		Block fishing_net_block = new FishingNetBlock("FishingNetBlock", blockId++);
+		fishing_net_block = new FishingNetBlock("FishingNetBlock", blockId++);
 
 		fishing_net_block_builder.build(fishing_net_block);
 

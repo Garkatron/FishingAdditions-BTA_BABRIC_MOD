@@ -21,6 +21,7 @@ public class ExampleMod implements ModInitializer, GameStartEntrypoint, RecipeEn
     public static final String MOD_ID = "testmod";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+
     @Override
     public void onInitialize() {
 
@@ -44,7 +45,8 @@ public class ExampleMod implements ModInitializer, GameStartEntrypoint, RecipeEn
 
 	@Override
 	public void onRecipesReady() {
-
+		RecipeInitializer rcp = new RecipeInitializer();
+		rcp.Initialize();
 	}
 
 	@Override
