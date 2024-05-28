@@ -13,7 +13,7 @@ public class RecipeInitializer {
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("HHH", "HAH", "HHH")
 			.addInput('H', Item.ingotIron)
-			.addInput('A', Item.foodPorkchopRaw)
+			.addInput('A', Item.foodFishRaw)
 			.create("FishingNetBlockCrafting", fishing_net_block.getDefaultStack());
 	}
 }
