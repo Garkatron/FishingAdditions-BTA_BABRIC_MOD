@@ -1,12 +1,10 @@
 package dev.deus.testmod;
 
-import dev.deus.testmod.Blocks.FishingNetBlock;
 import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemStack;
 import turniplabs.halplibe.helper.RecipeBuilder;
 
 import static dev.deus.testmod.BlockInitializer.fishing_net_block;
-import static dev.deus.testmod.ExampleMod.MOD_ID;
+import static dev.deus.testmod.FishingAdditions.MOD_ID;
 
 public class RecipeInitializer {
 	public void Initialize() {

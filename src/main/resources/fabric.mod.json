@@ -19,16 +19,16 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.deus.testmod.ExampleMod"
+      "dev.deus.testmod.FishingAdditions"
     ],
 		"beforeGameStart": [
-          "dev.deus.testmod.ExampleMod"
+          "dev.deus.testmod.FishingAdditions"
 		],
 		"afterGameStart": [
-          "dev.deus.testmod.ExampleMod"
+          "dev.deus.testmod.FishingAdditions"
 		],
 		"recipesReady": [
-          "dev.deus.testmod.ExampleMod"
+          "dev.deus.testmod.FishingAdditions"
 		]
 	},
   "mixins": [
