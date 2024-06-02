@@ -1,4 +1,4 @@
-package dev.deus.testmod.TileEntities;
+package dev.deus.fishing_additions.TileEntities;
 
 import net.minecraft.core.block.BlockTileEntityRotatable;
 import net.minecraft.core.block.entity.TileEntity;

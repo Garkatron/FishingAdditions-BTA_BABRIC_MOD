@@ -1,9 +1,7 @@
-package dev.deus.testmod.Blocks;
+package dev.deus.fishing_additions.Blocks;
 
-import dev.deus.testmod.TileEntities.TileEntityFishingNetBlock;
-import dev.deus.testmod.TileEntities.TransparentBlockTileEntityRotatable;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.block.BlockChest;
+import dev.deus.fishing_additions.TileEntities.TileEntityFishingNetBlock;
+import dev.deus.fishing_additions.TileEntities.TransparentBlockTileEntityRotatable;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.Item;

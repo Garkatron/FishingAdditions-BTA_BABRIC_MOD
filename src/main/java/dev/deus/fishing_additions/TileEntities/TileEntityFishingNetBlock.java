@@ -1,7 +1,5 @@
-package dev.deus.testmod.TileEntities;
+package dev.deus.fishing_additions.TileEntities;
 
-import com.mojang.nbt.CompoundTag;
-import com.mojang.nbt.ListTag;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemStack;

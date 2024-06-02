@@ -1,7 +1,6 @@
-package dev.deus.testmod.GUIs;
+package dev.deus.fishing_additions.GUIs;
 
 import net.minecraft.client.gui.GuiContainer;
-import net.minecraft.core.player.inventory.Container;
 import net.minecraft.core.player.inventory.ContainerChest;
 import net.minecraft.core.player.inventory.IInventory;
 import org.lwjgl.opengl.GL11;

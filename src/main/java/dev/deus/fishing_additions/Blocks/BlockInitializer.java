@@ -1,7 +1,7 @@
-package dev.deus.testmod;
+package dev.deus.fishing_additions.Blocks;
 
-import dev.deus.testmod.Blocks.FishingNetBlock;
-import static dev.deus.testmod.Config.ModConfig.BLOCK_ID;
+import static dev.deus.fishing_additions.Config.ModConfig.newBlockID;
+
 import net.minecraft.client.render.block.model.BlockModelRenderBlocks;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;
@@ -26,7 +26,7 @@ public class BlockInitializer {
 			.setResistance(1.0F)
 			.setTags(BlockTags.MINEABLE_BY_PICKAXE);
 		;
-		fishing_net_block = new FishingNetBlock("FishingNetBlock", BLOCK_ID++);
+		fishing_net_block = new FishingNetBlock("FishingNetBlock", newBlockID());
 
 		fishing_net_block_builder.build(fishing_net_block);
 

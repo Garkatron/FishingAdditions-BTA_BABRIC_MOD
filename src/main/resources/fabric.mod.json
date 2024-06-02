@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "fishing_additions",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "FishingAdditions",
   "description": "This mod aims to help new BTA modders.",
   "authors": [
-    "Turnip Labs"
+    "@Garkatron"
   ],
   "contact": {
     "homepage": "",
@@ -19,20 +19,20 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.deus.testmod.FishingAdditions"
+      "dev.deus.fishing_additions.FishingAdditions"
     ],
 		"beforeGameStart": [
-          "dev.deus.testmod.FishingAdditions"
+          "dev.deus.fishing_additions.FishingAdditions"
 		],
 		"afterGameStart": [
-          "dev.deus.testmod.FishingAdditions"
+          "dev.deus.fishing_additions.FishingAdditions"
 		],
 		"recipesReady": [
-          "dev.deus.testmod.FishingAdditions"
+          "dev.deus.fishing_additions.FishingAdditions"
 		]
 	},
   "mixins": [
-      "examplemod.mixins.json"
+      "fishing_additions.mixins.json"
   ],
 
   "depends": {
