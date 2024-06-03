@@ -1,5 +1,5 @@
-tile.fishing_additions.FishingNetBlock.name = Fishing Net Block
-tile.fishing_additions.FishingNetBlock.desc = Automatically fishes every 5 minutes.
+tile.fishing_additions.fishing_net_block.name = Fishing Net Block
+tile.fishing_additions.fishing_net_block.desc = Automatically fishes every 5 minutes.
 
-item.fishing_additions.GoldFishingRod.name = Gold Fishing Rod
-item.fishing_additions.GoldFishingRod.desc = A Gold Fishing Rod
+item.fishing_additions.gold_fishing_rod.name = Gold Fishing Rod
+item.fishing_additions.gold_fishing_rod.desc = A Gold Fishing Rod

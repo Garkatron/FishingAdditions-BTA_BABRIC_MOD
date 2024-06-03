@@ -6,6 +6,7 @@ import dev.deus.fishing_additions.Debug.Debug;
 import dev.deus.fishing_additions.Items.FishingAdditionsItems;
 import dev.deus.fishing_additions.Items.ItemGoldFishingRod;
 import dev.deus.fishing_additions.Items.ItemIronFishingRod;
+import dev.deus.fishing_additions.Recipes.RecipeInitializer;
 import dev.deus.fishing_additions.Trash.ItemInitializer;
 import dev.deus.fishing_additions.TileEntities.TileEntityFishingNetBlock;
 import net.minecraft.core.item.Item;
@@ -30,7 +31,7 @@ public class FishingAdditions implements ModInitializer, GameStartEntrypoint, Re
 	public void onInitialize() {
 
 		// Inicializa TileEntity
-		EntityHelper.Core.createTileEntity(TileEntityFishingNetBlock.class, "TileEntityFishingNetBlock");
+		EntityHelper.createTileEntity(TileEntityFishingNetBlock.class, "TileEntityFishingNetBlock");
 		LOGGER.info("FishingAdditions initialized.");
 	}
 
@@ -49,8 +50,8 @@ public class FishingAdditions implements ModInitializer, GameStartEntrypoint, Re
 
 	@Override
 	public void onRecipesReady() {
-		//RecipeInitializer rcp = new RecipeInitializer();
-		//rcp.Initialize();
+		RecipeInitializer rcp = new RecipeInitializer();
+		rcp.Initialize();
 	}
 
 	@Override

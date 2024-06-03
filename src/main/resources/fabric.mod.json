@@ -35,10 +35,10 @@
       "fishing_additions.mixins.json"
   ],
 
-  "depends": {
-		"minecraft": "~7.1",
-    "fabricloader": ">=0.15.5"
-  },
+	"depends": {
+		"fabricloader": ">=0.13.3",
+		"halplibe": ">=4.0.5"
+	},
   "suggests": {
   }
 }

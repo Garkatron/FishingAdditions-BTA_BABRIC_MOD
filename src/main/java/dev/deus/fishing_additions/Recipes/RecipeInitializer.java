@@ -1,4 +1,4 @@
-package dev.deus.fishing_additions;
+package dev.deus.fishing_additions.Recipes;
 
 import dev.deus.fishing_additions.Debug.Debug;
 import net.minecraft.core.item.Item;
