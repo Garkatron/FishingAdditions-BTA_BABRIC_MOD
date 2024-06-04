@@ -1,11 +1,8 @@
 package dev.deus.fishing_additions.Items;
 
-import dev.deus.fishing_additions.Debug.Debug;
 import dev.deus.fishing_additions.Entities.CustomBobberEntity;
-import net.minecraft.core.entity.EntityBobber;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemFishingRod;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
 

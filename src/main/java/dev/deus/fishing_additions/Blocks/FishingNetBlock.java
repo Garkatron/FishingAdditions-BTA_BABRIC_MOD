@@ -2,13 +2,13 @@ package dev.deus.fishing_additions.Blocks;
 
 import dev.deus.fishing_additions.TileEntities.TileEntityFishingNetBlock;
 import dev.deus.fishing_additions.TileEntities.TransparentBlockTileEntityRotatable;
+import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.player.inventory.IInventory;
 import net.minecraft.core.world.World;
-import net.minecraft.core.block.entity.TileEntity;
 
 import java.util.Timer;
 import java.util.TimerTask;

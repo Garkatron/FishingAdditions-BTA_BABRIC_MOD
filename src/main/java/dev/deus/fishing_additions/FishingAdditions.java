@@ -2,19 +2,13 @@ package dev.deus.fishing_additions;
 
 import dev.deus.fishing_additions.Blocks.BlockInitializer;
 import dev.deus.fishing_additions.Config.ModConfig;
-import dev.deus.fishing_additions.Debug.Debug;
 import dev.deus.fishing_additions.Items.FishingAdditionsItems;
-import dev.deus.fishing_additions.Items.ItemGoldFishingRod;
-import dev.deus.fishing_additions.Items.ItemIronFishingRod;
 import dev.deus.fishing_additions.Recipes.RecipeInitializer;
-import dev.deus.fishing_additions.Trash.ItemInitializer;
 import dev.deus.fishing_additions.TileEntities.TileEntityFishingNetBlock;
-import net.minecraft.core.item.Item;
-import turniplabs.halplibe.helper.*;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import turniplabs.halplibe.helper.EntityHelper;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 

@@ -1,8 +1,6 @@
 package dev.deus.fishing_additions.Entities;
 
 import com.mojang.nbt.CompoundTag;
-import dev.deus.fishing_additions.Items.ItemGoldFishingRod;
-import dev.deus.fishing_additions.Trash.ItemInitializer;
 import net.minecraft.core.HitResult;
 import net.minecraft.core.achievement.stat.StatList;
 import net.minecraft.core.block.Block;
