@@ -3,3 +3,12 @@ tile.fishing_additions.fishing_net_block.desc = Automatically fishes every 5 min
 
 item.fishing_additions.gold_fishing_rod.name = Gold Fishing Rod
 item.fishing_additions.gold_fishing_rod.desc = A Gold Fishing Rod
+
+item.fishing_additions.iron_fishing_rod.name = Iron Fishing Rod
+item.fishing_additions.iron_fishing_rod.desc = A Iron Fishing Rod
+
+item.fishing_additions.steel_fishing_rod.name = Steel Fishing Rod
+item.fishing_additions.steel_fishing_rod.desc = A Steel Fishing Rod
+
+item.fishing_additions.hydra_scale.name = Hýdra scale
+item.fishing_additions.hydra_scale.desc = What?!
