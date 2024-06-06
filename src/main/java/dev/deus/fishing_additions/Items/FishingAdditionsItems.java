@@ -17,6 +17,7 @@ public class FishingAdditionsItems {
 	public static ItemFood pufferfish;
 	public static ItemFood salmon;
 	public static ItemFood tropical_fish;
+	public static ItemFood cod_fish;
 
 	// Fishing Rod
 	public static Item gold_fishing_rod_item;
@@ -30,6 +31,8 @@ public class FishingAdditionsItems {
 	public static ItemFood gold_fish;
 	public static ItemFood cooked_gold_fish;
 
+	public static ItemFood cooked_fish_soup;
+
 	// Ingredients
 	public static Item HydraScale;
 
@@ -41,16 +44,16 @@ public class FishingAdditionsItems {
 			.build(new ItemFood(
 				"pufferfish",
 				config.newItemID(),
-				1,
-				2,
+				1, // Valor de saturación para pufferfish
+				2, // Valor de curación para pufferfish
 				false,
 				64
 			));
 
 		salmon = new ItemBuilder(MOD_ID)
 			.build(new ItemFood("salmon", config.newItemID(),
-				2, // Valor de saturación para salmon
-				4, // Valor de curación para salmon
+				3, // Valor de saturación para salmon
+				6, // Valor de curación para salmon
 				false,
 				64
 			));
@@ -58,8 +61,16 @@ public class FishingAdditionsItems {
 		tropical_fish = new ItemBuilder(MOD_ID)
 			.build(new ItemFood(
 				"tropical_fish", config.newItemID(),
-				1,
-				3,
+				2, // Valor de saturación para tropical_fish
+				4, // Valor de curación para tropical_fish
+				false,
+				64
+			));
+		cod_fish = new ItemBuilder(MOD_ID)
+			.build(new ItemFood(
+				"cod_fish", config.newItemID(),
+				2, // Valor de saturación para cod_fish
+				4, // Valor de curación para cod_fish
 				false,
 				64
 			));
@@ -67,8 +78,8 @@ public class FishingAdditionsItems {
 		cooked_salmon = new ItemBuilder(MOD_ID)
 			.build(new ItemFood(
 				"cooked_salmon", config.newItemID(),
-				6,
-				8,
+				8, // Valor de saturación para cooked_salmon
+				10, // Valor de curación para cooked_salmon
 				false,
 				64
 			));
@@ -77,8 +88,8 @@ public class FishingAdditionsItems {
 			.build(new ItemFood(
 				"cooked_cod",
 				config.newItemID(),
-				5,
-				7,
+				7, // Valor de saturación para cooked_cod
+				9, // Valor de curación para cooked_cod
 				false,
 				64
 			));
@@ -88,8 +99,8 @@ public class FishingAdditionsItems {
 			.build(new ItemFood(
 				"gold_fish",
 				config.newItemID(),
-				5,
-				7,
+				6, // Valor de saturación para gold_fish
+				8, // Valor de curación para gold_fish
 				false,
 				64
 			));
@@ -98,8 +109,18 @@ public class FishingAdditionsItems {
 			.build(new ItemFood(
 				"cooked_gold_fish",
 				config.newItemID(),
-				5,
-				7,
+				10, // Valor de saturación para cooked_gold_fish
+				12, // Valor de curación para cooked_gold_fish
+				false,
+				64
+			));
+
+		cooked_fish_soup = new ItemBuilder(MOD_ID)
+			.build(new ItemFood(
+				"cooked_fish_soup",
+				config.newItemID(),
+				16, // Valor de saturación para cooked_gold_fish
+				16, // Valor de curación para cooked_gold_fish
 				false,
 				64
 			));

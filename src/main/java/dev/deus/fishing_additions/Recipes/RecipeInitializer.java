@@ -20,21 +20,44 @@ public class RecipeInitializer {
 			.create("FishingNetBlockCrafting", fishing_net_block.getDefaultStack());
 
 		RecipeBuilder.Shaped(MOD_ID)
-			.setShape("H  ", " H ", "  H")
+			.setShape(
+				"  H",
+				" HS",
+				"H S")
 			.addInput('H', Item.ingotGold)
+			.addInput('S', Item.string)
+
 			.create("GoldFishingRodCrafting", gold_fishing_rod_item.getDefaultStack());
 
 		RecipeBuilder.Shaped(MOD_ID)
-			.setShape("H  ", " H ", "  H")
+			.setShape(
+				"  H",
+				" HS",
+				"H S")
 			.addInput('H', Item.ingotIron)
+			.addInput('S', Item.string)
+
 			.create("IronFishingRodCrafting", iron_fishing_rod_item.getDefaultStack());
 
 		RecipeBuilder.Shaped(MOD_ID)
-			.setShape("H  ", " H ", "  H")
+			.setShape(
+				"  H",
+				" HS",
+				"H S")
 			.addInput('H', Item.ingotSteel)
+			.addInput('S', Item.string)
 			.create("SteelFishingRodCrafting", steel_fishing_rod_item.getDefaultStack());
 
-		// FOOD
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape(" F ", "KFJ", " W ")
+			.addInput('W', Item.bowl)
+			.addInput('F', Item.foodFishCooked)
+			.addInput('K', cooked_salmon)
+			.addInput('J', cooked_cod)
+
+			.create("CookedFishSoupCrafting", cooked_fish_soup.getDefaultStack());
+
+		// FURNACE
 		RecipeBuilder.Furnace(MOD_ID).setInput(salmon).create("CookedSalmonRecipe",cooked_salmon.getDefaultStack());
 		RecipeBuilder.Furnace(MOD_ID).setInput(gold_fish).create("CookedGoldFishRecipe",cooked_gold_fish.getDefaultStack());
 		// RecipeBuilder.Furnace(MOD_ID).setInput().create("CookedSalmonRecipe",salmon.getDefaultStack());

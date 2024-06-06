@@ -12,3 +12,31 @@ item.fishing_additions.steel_fishing_rod.desc = A Steel Fishing Rod
 
 item.fishing_additions.hydra_scale.name = Hýdra scale
 item.fishing_additions.hydra_scale.desc = What?!
+
+item.fishing_additions.cod_fish.name = Cod fish
+item.fishing_additions.cod_fish.desc = A different fish
+
+item.fishing_additions.cooked_cod.name = Cooked cod fish
+item.fishing_additions.cooked_cod.desc = A different fish but cooked
+
+item.fishing_additions.salmon.name = Salmon fish
+item.fishing_additions.salmon.desc = A fish
+
+item.fishing_additions.cooked_salmon.name = Cooked salmon fish
+item.fishing_additions.cooked_salmon.desc = A cooked salmon fish
+
+item.fishing_additions.gold_fish.name = Gold fish
+item.fishing_additions.gold_fish.desc = Timmy: Are you Cosmo?
+
+item.fishing_additions.cooked_gold_fish.name = What?!
+item.fishing_additions.cooked_gold_fish.desc = What?!
+
+item.fishing_additions.pufferfish.name = Pufferfish
+item.fishing_additions.pufferfish.desc = Poison
+
+item.fishing_additions.tropical_fish.name = Tropical fish
+item.fishing_additions.tropical_fish.desc = Nemo?!
+
+item.fishing_additions.cooked_fish_soup.name = Cooked fish soup
+item.fishing_additions.cooked_fish_soup.desc = A awful soup
+
