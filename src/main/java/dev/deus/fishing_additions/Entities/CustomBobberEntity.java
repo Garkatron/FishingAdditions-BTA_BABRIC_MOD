@@ -1,6 +1,8 @@
 package dev.deus.fishing_additions.Entities;
 
 import com.mojang.nbt.CompoundTag;
+import dev.deus.fishing_additions.EntityLootTable;
+import dev.deus.fishing_additions.LootTable;
 import net.minecraft.core.HitResult;
 import net.minecraft.core.achievement.stat.StatList;
 import net.minecraft.core.block.Block;
@@ -19,8 +21,6 @@ import net.minecraft.core.world.World;
 
 import java.util.Iterator;
 import java.util.List;
-
-import static dev.deus.fishing_additions.Items.FishingAdditionsItems.gold_fishing_rod_item;
 
 public class CustomBobberEntity extends EntityBobber {
 
@@ -41,25 +41,27 @@ public class CustomBobberEntity extends EntityBobber {
 	private double velocityX;
 	private double velocityY;
 	private double velocityZ;
+    private final Item customRod;
+	private final LootTable lootTable;
 
-
-
-	public CustomBobberEntity(World world) {
+	public CustomBobberEntity(World world, Item custom_rod, LootTable lootTable) {
 		super(world);
 		this.ticksInAir = 0;
 		this.ticksCatchable = 0;
 		this.hookedEntity = null;
 		this.setSize(0.25F, 0.25F);
 		this.ignoreFrustumCheck = true;
+		this.customRod = custom_rod;
+		this.lootTable = lootTable;
 	}
 
-	public CustomBobberEntity(World world, double d, double d1, double d2) {
-		this(world);
+	public CustomBobberEntity(World world, double d, double d1, double d2, Item custom_rod, LootTable lootTable) {
+		this(world, custom_rod, lootTable);
 		this.setPos(d, d1, d2);
 		this.ignoreFrustumCheck = true;
 	}
 
-	public CustomBobberEntity(World world, EntityPlayer entityplayer) {
+	public CustomBobberEntity(World world, EntityPlayer entityplayer, Item custom_rod, LootTable lootTable) {
 		super(world);
 		this.ticksInAir = 0;
 		this.ticksCatchable = 0;
@@ -79,6 +81,8 @@ public class CustomBobberEntity extends EntityBobber {
 		this.zd = (double)(MathHelper.cos(this.yRot / 180.0F * 3.1415927F) * MathHelper.cos(this.xRot / 180.0F * 3.1415927F) * f);
 		this.yd = (double)(-MathHelper.sin(this.xRot / 180.0F * 3.1415927F) * f);
 		this.func_4042_a(this.xd, this.yd, this.zd, 1.5F, 1.0F);
+		this.customRod = custom_rod;
+		this.lootTable = lootTable;
 	}
 	@Override
 
@@ -157,7 +161,7 @@ public class CustomBobberEntity extends EntityBobber {
 			if (!this.world.isClientSide) {
 				ItemStack heldPlayerItem = this.player.getCurrentEquippedItem();
 
-				if (this.player.removed || !this.player.isAlive() || heldPlayerItem == null || heldPlayerItem.getItem() != gold_fishing_rod_item || this.distanceToSqr(this.player) > 1024.0) {
+				if (this.player.removed || !this.player.isAlive() || heldPlayerItem == null || heldPlayerItem.getItem() != this.customRod || this.distanceToSqr(this.player) > 1024.0) {
 					this.remove();
 					this.player.bobberEntity = null;
 					return;
@@ -401,7 +405,7 @@ public class CustomBobberEntity extends EntityBobber {
 			var15.zd += dz * scale;
 			damage = 3;
 		} else if (this.ticksCatchable > 0) {
-			EntityItem entityitem = new EntityItem(this.world, this.x, this.y, this.z, new ItemStack(Item.foodFishRaw));
+			EntityItem entityitem = new EntityItem(this.world, this.x, this.y, this.z, new ItemStack(this.lootTable.getRandomItem()));
 			dx = this.player.x - this.x;
 			dy = this.player.y - this.y;
 			dz = this.player.z - this.z;
@@ -423,4 +427,6 @@ public class CustomBobberEntity extends EntityBobber {
 		this.player.bobberEntity = null;
 		return damage;
 	}
+
 }
+

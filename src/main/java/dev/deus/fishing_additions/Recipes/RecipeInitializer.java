@@ -6,7 +6,7 @@ import turniplabs.halplibe.helper.RecipeBuilder;
 
 import static dev.deus.fishing_additions.Blocks.BlockInitializer.fishing_net_block;
 import static dev.deus.fishing_additions.FishingAdditions.MOD_ID;
-import static dev.deus.fishing_additions.Items.FishingAdditionsItems.gold_fishing_rod_item;
+import static dev.deus.fishing_additions.Items.FishingAdditionsItems.*;
 
 public class RecipeInitializer {
 	public void Initialize() {
@@ -21,7 +21,30 @@ public class RecipeInitializer {
 
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("H  ", " H ", "  H")
-			.addInput('H', Item.ingotIron)
+			.addInput('H', Item.ingotGold)
 			.create("GoldFishingRodCrafting", gold_fishing_rod_item.getDefaultStack());
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("H  ", " H ", "  H")
+			.addInput('H', Item.ingotIron)
+			.create("IronFishingRodCrafting", iron_fishing_rod_item.getDefaultStack());
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("H  ", " H ", "  H")
+			.addInput('H', Item.ingotSteel)
+			.create("SteelFishingRodCrafting", steel_fishing_rod_item.getDefaultStack());
+
+		// FOOD
+		RecipeBuilder.Furnace(MOD_ID).setInput(salmon).create("CookedSalmonRecipe",cooked_salmon.getDefaultStack());
+		RecipeBuilder.Furnace(MOD_ID).setInput(gold_fish).create("CookedGoldFishRecipe",cooked_gold_fish.getDefaultStack());
+		// RecipeBuilder.Furnace(MOD_ID).setInput().create("CookedSalmonRecipe",salmon.getDefaultStack());
+		// RecipeBuilder.Furnace(MOD_ID).setInput(salmon).create("CookedSalmonRecipe",salmon.getDefaultStack());
+
+
+
+
+
+
+
 	}
 }

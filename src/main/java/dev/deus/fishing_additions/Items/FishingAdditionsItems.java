@@ -1,6 +1,9 @@
 package dev.deus.fishing_additions.Items;
 
-import dev.deus.fishing_additions.Items.ItemModel.HydraScale;
+import dev.deus.fishing_additions.Items.Ingredients.HydraScale;
+import dev.deus.fishing_additions.Items.Tools.ItemGoldFishingRod;
+import dev.deus.fishing_additions.Items.Tools.ItemIronFishingRod;
+import dev.deus.fishing_additions.Items.Tools.ItemSteelFishingRod;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemFood;
 import turniplabs.halplibe.helper.ItemBuilder;
@@ -10,34 +13,28 @@ import static dev.deus.fishing_additions.FishingAdditions.config;
 
 public class FishingAdditionsItems {
 
+	//
+	public static ItemFood pufferfish;
+	public static ItemFood salmon;
+	public static ItemFood tropical_fish;
+
 	// Fishing Rod
 	public static Item gold_fishing_rod_item;
 	public static Item iron_fishing_rod_item;
 	public static Item steel_fishing_rod_item;
 
-	public static ItemFood pufferfish;
-	public static ItemFood salmon;
-	public static ItemFood tropical_fish;
+
 
 	public static ItemFood cooked_salmon;
 	public static ItemFood cooked_cod;
-
-
+	public static ItemFood gold_fish;
+	public static ItemFood cooked_gold_fish;
 
 	// Ingredients
 	public static Item HydraScale;
 
 
 	public void Initialize() {
-
-		gold_fishing_rod_item = new ItemBuilder(MOD_ID)
-			.build(new ItemGoldFishingRod("gold_fishing_rod", config.newItemID()));
-
-		iron_fishing_rod_item = new ItemBuilder(MOD_ID)
-			.build(new ItemIronFishingRod("iron_fishing_rod", config.newItemID()));
-
-		steel_fishing_rod_item = new ItemBuilder(MOD_ID)
-			.build(new ItemSteelFishingRod("steel_fishing_rod", config.newItemID()));
 
 		//
 		pufferfish = new ItemBuilder(MOD_ID)
@@ -85,6 +82,38 @@ public class FishingAdditionsItems {
 				false,
 				64
 			));
+
+
+		gold_fish = new ItemBuilder(MOD_ID)
+			.build(new ItemFood(
+				"gold_fish",
+				config.newItemID(),
+				5,
+				7,
+				false,
+				64
+			));
+
+		cooked_gold_fish = new ItemBuilder(MOD_ID)
+			.build(new ItemFood(
+				"cooked_gold_fish",
+				config.newItemID(),
+				5,
+				7,
+				false,
+				64
+			));
+
+		gold_fishing_rod_item = new ItemBuilder(MOD_ID)
+			.build(new ItemGoldFishingRod("gold_fishing_rod", config.newItemID()));
+
+		iron_fishing_rod_item = new ItemBuilder(MOD_ID)
+			.build(new ItemIronFishingRod("iron_fishing_rod", config.newItemID()));
+
+		steel_fishing_rod_item = new ItemBuilder(MOD_ID)
+			.build(new ItemSteelFishingRod("steel_fishing_rod", config.newItemID()));
+
+
 
 
 

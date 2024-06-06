@@ -1,4 +1,4 @@
-package dev.deus.fishing_additions.Items.ItemModel;
+package dev.deus.fishing_additions.Items.Ingredients;
 
 import net.minecraft.core.item.Item;
 
