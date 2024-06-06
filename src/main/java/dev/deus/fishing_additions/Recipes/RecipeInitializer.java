@@ -26,7 +26,6 @@ public class RecipeInitializer {
 				"H S")
 			.addInput('H', Item.ingotGold)
 			.addInput('S', Item.string)
-
 			.create("GoldFishingRodCrafting", gold_fishing_rod_item.getDefaultStack());
 
 		RecipeBuilder.Shaped(MOD_ID)
@@ -36,7 +35,6 @@ public class RecipeInitializer {
 				"H S")
 			.addInput('H', Item.ingotIron)
 			.addInput('S', Item.string)
-
 			.create("IronFishingRodCrafting", iron_fishing_rod_item.getDefaultStack());
 
 		RecipeBuilder.Shaped(MOD_ID)
