@@ -128,7 +128,7 @@ public class FishingAdditionsItems {
 
 		gold_fishing_rod_item = new ItemBuilder(MOD_ID)
 			.build(new ItemGoldFishingRod("gold_fishing_rod", config.newItemID()));
-  
+
 		iron_fishing_rod_item = new ItemBuilder(MOD_ID)
 			.build(new ItemIronFishingRod("iron_fishing_rod", config.newItemID()));
 

@@ -33,4 +33,11 @@ public class Debug {
 		System.out.println(CYAN + x + RESET);
 		System.out.println(YELLOW + "----------------------------------------------------------" + RESET);
 	}
+
+	public static void println(double x) {
+		System.out.println(BLUE + "[Debug]" + RESET);
+		System.out.println(YELLOW + "----------------------------------------------------------" + RESET);
+		System.out.println(CYAN + x + RESET);
+		System.out.println(YELLOW + "----------------------------------------------------------" + RESET);
+	}
 }

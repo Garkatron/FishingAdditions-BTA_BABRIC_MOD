@@ -58,6 +58,7 @@ public class RecipeInitializer {
 		// FURNACE
 		RecipeBuilder.Furnace(MOD_ID).setInput(salmon).create("CookedSalmonRecipe",cooked_salmon.getDefaultStack());
 		RecipeBuilder.Furnace(MOD_ID).setInput(gold_fish).create("CookedGoldFishRecipe",cooked_gold_fish.getDefaultStack());
+		RecipeBuilder.Furnace(MOD_ID).setInput(cod_fish).create("CookedCodFishRecipe",cooked_cod.getDefaultStack());
 		// RecipeBuilder.Furnace(MOD_ID).setInput().create("CookedSalmonRecipe",salmon.getDefaultStack());
 		// RecipeBuilder.Furnace(MOD_ID).setInput(salmon).create("CookedSalmonRecipe",salmon.getDefaultStack());
 
