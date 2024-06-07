@@ -6,6 +6,7 @@ import dev.deus.fishing_additions.Items.Tools.ItemIronFishingRod;
 import dev.deus.fishing_additions.Items.Tools.ItemSteelFishingRod;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemFood;
+import turniplabs.halplibe.helper.CreativeHelper;
 import turniplabs.halplibe.helper.ItemBuilder;
 
 import static dev.deus.fishing_additions.FishingAdditions.MOD_ID;
@@ -134,15 +135,24 @@ public class FishingAdditionsItems {
 		steel_fishing_rod_item = new ItemBuilder(MOD_ID)
 			.build(new ItemSteelFishingRod("steel_fishing_rod", config.newItemID()));
 
-
-
-
-
-
 		HydraScale = new ItemBuilder(MOD_ID)
 			.build(new HydraScale("hydra_scale", config.newItemID()));
 
+
+		// here
+		assignPriorities();
+
 	}
+	// Bucle para asignar prioridades a todas las variables estáticas
+	public void assignPriorities() {
+		// Variables estáticas de tipo Item y ItemFood
+		Item[] items = { pufferfish, salmon, tropical_fish, cod_fish, cooked_salmon, cooked_cod, gold_fish, cooked_gold_fish, cooked_fish_soup, gold_fishing_rod_item, iron_fishing_rod_item, steel_fishing_rod_item, HydraScale };
+
+		for (Item item : items) {
+			CreativeHelper.setPriority(item, 1000);
+		}
+	}
+
 
 }
 

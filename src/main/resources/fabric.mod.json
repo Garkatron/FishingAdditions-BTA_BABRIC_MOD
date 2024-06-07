@@ -3,14 +3,14 @@
   "id": "fishing_additions",
   "version": "${version}",
 
-  "name": "FishingAdditions",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Fishing Additions",
+  "description": "I want a better fishing experience!",
   "authors": [
     "@Garkatron"
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/Garkatron/FishingAdditions-BTA_BABRIC_MOD/tree/7.2"
   },
 
 	"icon": "icon.png",
