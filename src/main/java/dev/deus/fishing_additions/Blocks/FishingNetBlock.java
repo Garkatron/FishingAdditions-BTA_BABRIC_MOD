@@ -79,6 +79,7 @@ public class FishingNetBlock extends TransparentBlockTileEntityRotatable {
 
 	public void displayGui(EntityPlayer player, IInventory inventory) {
 		player.displayGUIChest(inventory);
+
 	}
 
 	// Override

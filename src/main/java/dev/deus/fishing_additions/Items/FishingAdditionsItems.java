@@ -1,24 +1,40 @@
 package dev.deus.fishing_additions.Items;
 
+import deus.rarity.RarityLevel;
+import deus.rarity.interfaces.IItemMixin;
+import dev.deus.fishing_additions.Debug.Debug;
 import dev.deus.fishing_additions.Items.Ingredients.HydraScale;
 import dev.deus.fishing_additions.Items.Tools.ItemGoldFishingRod;
 import dev.deus.fishing_additions.Items.Tools.ItemIronFishingRod;
 import dev.deus.fishing_additions.Items.Tools.ItemSteelFishingRod;
+import dev.deus.fishing_additions.Tools.StaticFieldsExtractor;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemFood;
 import turniplabs.halplibe.helper.CreativeHelper;
 import turniplabs.halplibe.helper.ItemBuilder;
 
+import java.lang.reflect.Field;
+
 import static dev.deus.fishing_additions.FishingAdditions.MOD_ID;
 import static dev.deus.fishing_additions.FishingAdditions.config;
+import static dev.deus.fishing_additions.Tools.ItemUtils.makeFood;
+import static dev.deus.fishing_additions.Tools.ItemUtils.makeItem;
 
 public class FishingAdditionsItems {
+
+	//
+
+	public static final ItemBuilder GenericItemBuilder = new ItemBuilder(MOD_ID);
 
 	//
 	public static ItemFood pufferfish;
 	public static ItemFood salmon;
 	public static ItemFood tropical_fish;
 	public static ItemFood cod_fish;
+	public static ItemFood cooked_salmon;
+	public static ItemFood cooked_cod;
+	public static ItemFood gold_fish;
+	public static ItemFood cooked_gold_fish;
 
 	// Fishing Rod
 	public static Item gold_fishing_rod_item;
@@ -27,131 +43,69 @@ public class FishingAdditionsItems {
 
 
 
-	public static ItemFood cooked_salmon;
-	public static ItemFood cooked_cod;
-	public static ItemFood gold_fish;
-	public static ItemFood cooked_gold_fish;
 
 	public static ItemFood cooked_fish_soup;
 
 	// Ingredients
-	public static Item HydraScale;
+	public static Item hydra_scale;
 
 
 	public void Initialize() {
 
-		//
-		pufferfish = new ItemBuilder(MOD_ID)
-			.build(new ItemFood(
-				"pufferfish",
-				config.newItemID(),
-				1, // Valor de saturación para pufferfish
-				2, // Valor de curación para pufferfish
-				false,
-				64
-			));
+		// Fishes
+		pufferfish = makeFood(config.newItemID(), "pufferfish", 1, 2, false, 64, RarityLevel.COMMON);
+		tropical_fish = makeFood(config.newItemID(), "tropical_fish", 2, 4, false, 64, RarityLevel.COMMON);
 
-		salmon = new ItemBuilder(MOD_ID)
-			.build(new ItemFood("salmon", config.newItemID(),
-				3, // Valor de saturación para salmon
-				6, // Valor de curación para salmon
-				false,
-				64
-			));
+		salmon = makeFood(config.newItemID(), "salmon", 3, 6, false, 64);
+		cooked_salmon = makeFood(config.newItemID(), "cooked_salmon", 8, 10, false, 64, RarityLevel.COMMON);
 
-		tropical_fish = new ItemBuilder(MOD_ID)
-			.build(new ItemFood(
-				"tropical_fish", config.newItemID(),
-				2, // Valor de saturación para tropical_fish
-				4, // Valor de curación para tropical_fish
-				false,
-				64
-			));
-		cod_fish = new ItemBuilder(MOD_ID)
-			.build(new ItemFood(
-				"cod_fish", config.newItemID(),
-				2, // Valor de saturación para cod_fish
-				4, // Valor de curación para cod_fish
-				false,
-				64
-			));
+		cod_fish = makeFood(config.newItemID(), "cod_fish", 2, 4, false, 64, RarityLevel.COMMON);
+		cooked_cod = makeFood(config.newItemID(), "cooked_cod", 7, 9, false, 64, RarityLevel.COMMON);
 
-		cooked_salmon = new ItemBuilder(MOD_ID)
-			.build(new ItemFood(
-				"cooked_salmon", config.newItemID(),
-				8, // Valor de saturación para cooked_salmon
-				10, // Valor de curación para cooked_salmon
-				false,
-				64
-			));
+		gold_fish = makeFood(config.newItemID(), "gold_fish", 6, 8, false, 64, RarityLevel.UNCOMMON);
+		cooked_gold_fish = makeFood(config.newItemID(), "cooked_gold_fish", 10, 12, false, 64, RarityLevel.UNCOMMON);
 
-		cooked_cod = new ItemBuilder(MOD_ID)
-			.build(new ItemFood(
-				"cooked_cod",
-				config.newItemID(),
-				7, // Valor de saturación para cooked_cod
-				9, // Valor de curación para cooked_cod
-				false,
-				64
-			));
+		// Food
+		cooked_fish_soup = makeFood(config.newItemID(), "cooked_fish_soup", 16, 16, false, 64, RarityLevel.COMMON);
 
+		// Tools
+		gold_fishing_rod_item = makeItem(config.newItemID(),"gold_fishing_rod", RarityLevel.COMMON);
 
-		gold_fish = new ItemBuilder(MOD_ID)
-			.build(new ItemFood(
-				"gold_fish",
-				config.newItemID(),
-				6, // Valor de saturación para gold_fish
-				8, // Valor de curación para gold_fish
-				false,
-				64
-			));
+		iron_fishing_rod_item = makeItem(config.newItemID(),"iron_fishing_rod", RarityLevel.COMMON);
 
-		cooked_gold_fish = new ItemBuilder(MOD_ID)
-			.build(new ItemFood(
-				"cooked_gold_fish",
-				config.newItemID(),
-				10, // Valor de saturación para cooked_gold_fish
-				12, // Valor de curación para cooked_gold_fish
-				false,
-				64
-			));
+		steel_fishing_rod_item = makeItem(config.newItemID(),"steel_fishing_rod", RarityLevel.COMMON);
 
-		cooked_fish_soup = new ItemBuilder(MOD_ID)
-			.build(new ItemFood(
-				"cooked_fish_soup",
-				config.newItemID(),
-				16, // Valor de saturación para cooked_gold_fish
-				16, // Valor de curación para cooked_gold_fish
-				false,
-				64
-			));
-
-		gold_fishing_rod_item = new ItemBuilder(MOD_ID)
-			.build(new ItemGoldFishingRod("gold_fishing_rod", config.newItemID()));
-
-		iron_fishing_rod_item = new ItemBuilder(MOD_ID)
-			.build(new ItemIronFishingRod("iron_fishing_rod", config.newItemID()));
-
-		steel_fishing_rod_item = new ItemBuilder(MOD_ID)
-			.build(new ItemSteelFishingRod("steel_fishing_rod", config.newItemID()));
-
-		HydraScale = new ItemBuilder(MOD_ID)
-			.build(new HydraScale("hydra_scale", config.newItemID()));
-
+		// Ingredients
+		hydra_scale = makeItem(config.newItemID(),"hydra_scale", RarityLevel.RARE);
 
 		// here
 		assignPriorities();
 
 	}
-	// Bucle para asignar prioridades a todas las variables estáticas
-	public void assignPriorities() {
-		// Variables estáticas de tipo Item y ItemFood
-		Item[] items = { pufferfish, salmon, tropical_fish, cod_fish, cooked_salmon, cooked_cod, gold_fish, cooked_gold_fish, cooked_fish_soup, gold_fishing_rod_item, iron_fishing_rod_item, steel_fishing_rod_item, HydraScale };
 
-		for (Item item : items) {
-			CreativeHelper.setPriority(item, 1000);
+
+
+
+	public void assignPriorities() {
+		try {
+			String[] staticFieldNames = StaticFieldsExtractor.extractor(this.getClass());
+			for (String fieldName : staticFieldNames) {
+				Field field = this.getClass().getDeclaredField(fieldName);
+				field.setAccessible(true);
+				Object value = field.get(null);
+
+				if (value instanceof Item) {
+					Item item = (Item) value;
+					CreativeHelper.setPriority(item, 1000);
+					Debug.println("RARITY_CAST: " + item.getStatName());
+					Debug.println(((IItemMixin)item).rarityLib$getRarityLevel().toString());
+				}
+			}
+		} catch (NoSuchFieldException | IllegalAccessException e) {
+			e.printStackTrace();
 		}
 	}
+
 
 
 }
