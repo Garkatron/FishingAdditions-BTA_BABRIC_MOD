@@ -1,15 +1,15 @@
 package dev.deus.fishing_additions.Items.Ingredients;
 
-import deus.rarity.RarityLevel;
-import deus.rarity.interfaces.IItemMixin;
-import dev.deus.fishing_additions.Debug.Debug;
+import deus.rarity_lib.Interfaces.mixin.IItemRarityMixin;
+import deus.rarity_lib.RarityLevel;
+import dev.deus.fishing_additions.Tools.Debug.Debug;
 import net.minecraft.core.item.Item;
 
 public class HydraScale extends Item {
 	public HydraScale(String name, int id) {
 		super(name, id);
-		((IItemMixin) this).rarityLib$setRarityLevel(RarityLevel.RARE);
+		((IItemRarityMixin) this).rarityLib$setRarityLevel(RarityLevel.RARE);
 
-		Debug.println(((IItemMixin) this).rarityLib$getRarityLevel().toString());
+		Debug.println(((IItemRarityMixin) this).rarityLib$getRarityLevel().toString());
 	}
 }

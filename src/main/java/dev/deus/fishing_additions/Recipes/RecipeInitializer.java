@@ -1,6 +1,6 @@
 package dev.deus.fishing_additions.Recipes;
 
-import dev.deus.fishing_additions.Debug.Debug;
+import dev.deus.fishing_additions.Tools.Debug.Debug;
 import net.minecraft.core.item.Item;
 import turniplabs.halplibe.helper.RecipeBuilder;
 

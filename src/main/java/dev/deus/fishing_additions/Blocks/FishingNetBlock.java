@@ -2,6 +2,7 @@ package dev.deus.fishing_additions.Blocks;
 
 import dev.deus.fishing_additions.TileEntities.TileEntityFishingNetBlock;
 import dev.deus.fishing_additions.TileEntities.TransparentBlockTileEntityRotatable;
+import dev.deus.fishing_additions.Tools.Debug.Debug;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.player.EntityPlayer;
@@ -13,6 +14,8 @@ import net.minecraft.core.world.World;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static dev.deus.fishing_additions.Items.LootTables.LootTables.FishingNetBlockLootTable;
+
 public class FishingNetBlock extends TransparentBlockTileEntityRotatable {
 
 	// Time in milliseconds
@@ -23,7 +26,8 @@ public class FishingNetBlock extends TransparentBlockTileEntityRotatable {
 
 	public FishingNetBlock(String key, int id) {
 		super(key, id, Material.metal);
-		this.requiredTime = 5 * 60 * 1000L; // 5minutes
+		this.requiredTime = 1000L; // 5minutes
+		//		this.requiredTime = 5 * 60 * 1000L; // 5minutes
 	}
 
 	// Own functions
@@ -46,7 +50,12 @@ public class FishingNetBlock extends TransparentBlockTileEntityRotatable {
 					if (tile_entity_chest != null) {
 						System.out.println(tile_entity_chest.getStackInSlot(1));
 
-						ItemStack stackToDistribute = new ItemStack(Item.foodFishRaw);
+						ItemStack stackToDistribute = FishingNetBlockLootTable.getRandomItemWithProbability();
+
+						while (stackToDistribute==null){
+							Debug.println("STACK TO DESTRIBUTE: NULL");
+							stackToDistribute = FishingNetBlockLootTable.getRandomItemWithProbability();
+						}
 
 						while (currentSlotIndex < tile_entity_chest.getSizeInventory()) {
 							ItemStack currentStack = tile_entity_chest.getStackInSlot(currentSlotIndex);

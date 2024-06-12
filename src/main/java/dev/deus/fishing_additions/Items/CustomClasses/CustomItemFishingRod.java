@@ -1,18 +1,11 @@
 package dev.deus.fishing_additions.Items.CustomClasses;
 
+import deus.rarity_lib.LootTables.LootTable;
 import dev.deus.fishing_additions.Entities.CustomBobberEntity;
-import dev.deus.fishing_additions.EntityLootTable;
-import dev.deus.fishing_additions.Items.Tools.ItemGoldFishingRod;
-import dev.deus.fishing_additions.LootTable;
-import net.minecraft.core.entity.Entity;
-import net.minecraft.core.entity.EntityItem;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
-
-import static dev.deus.fishing_additions.Items.FishingAdditionsItems.gold_fishing_rod_item;
-import static dev.deus.fishing_additions.Items.LootTables.LootTables.GoldFishingRodLootTable;
 
 public class CustomItemFishingRod extends Item {
 

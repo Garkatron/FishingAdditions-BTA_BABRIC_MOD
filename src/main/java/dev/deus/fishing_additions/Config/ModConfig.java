@@ -1,6 +1,6 @@
 package dev.deus.fishing_additions.Config;
 
-import dev.deus.fishing_additions.Debug.Debug;
+import dev.deus.fishing_additions.Tools.Debug.Debug;
 import turniplabs.halplibe.util.ConfigHandler;
 
 import java.util.Properties;
@@ -11,6 +11,10 @@ public class ModConfig {
 
 	private int BLOCK_ID;
 	private int ITEM_ID;
+
+	private static double HEALING_FACTOR_VALUE; // Healing value increase factor per mm
+	private static int BASE_HEALING_VALUE; // Base healing value
+
 
 	public int newBlockID() {
 		Debug.println("FISHING ADDITIONS MOD CONFIG: PRE BLOCK ID: " + BLOCK_ID);
@@ -38,6 +42,9 @@ public class ModConfig {
 		Debug.println("FISHING ADDITIONS MOD CONFIG: PRE STARTING ITEM ID: " + STARTING_ITEM_ID);
 		prop.setProperty("starting_item_id", String.valueOf(STARTING_ITEM_ID));
 
+		prop.setProperty("healing_factor_value", "0.1");
+		prop.setProperty("base_healing_value", String.valueOf(0));
+
 		ConfigHandler config = new ConfigHandler(MOD_ID, prop);
 
 		// Leer los valores de la configuración, usando valores predeterminados si no están presentes
@@ -46,6 +53,11 @@ public class ModConfig {
 
 		ITEM_ID = config.getInt("starting_item_id");
 		Debug.println("FISHING ADDITIONS MOD CONFIG: STARTING ITEM ID: " + ITEM_ID);
+
+
+
+		HEALING_FACTOR_VALUE = Double.parseDouble(config.getString("healing_factor_value"));
+		BASE_HEALING_VALUE = config.getInt("base_healing_value");
 
 		config.updateConfig();
 	}

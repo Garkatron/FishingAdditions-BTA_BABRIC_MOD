@@ -1,8 +1,7 @@
 package dev.deus.fishing_additions.Entities;
 
 import com.mojang.nbt.CompoundTag;
-import dev.deus.fishing_additions.EntityLootTable;
-import dev.deus.fishing_additions.LootTable;
+import deus.rarity_lib.LootTables.LootTable;
 import net.minecraft.core.HitResult;
 import net.minecraft.core.achievement.stat.StatList;
 import net.minecraft.core.block.Block;
@@ -405,7 +404,7 @@ public class CustomBobberEntity extends EntityBobber {
 			var15.zd += dz * scale;
 			damage = 3;
 		} else if (this.ticksCatchable > 0) {
-			EntityItem entityitem = new EntityItem(this.world, this.x, this.y, this.z, new ItemStack(this.lootTable.getRandomItem()));
+			EntityItem entityitem = new EntityItem(this.world, this.x, this.y, this.z, this.lootTable.getRandomItemWithProbability());
 			dx = this.player.x - this.x;
 			dy = this.player.y - this.y;
 			dz = this.player.z - this.z;

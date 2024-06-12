@@ -5,12 +5,15 @@ import dev.deus.fishing_additions.Config.ModConfig;
 import dev.deus.fishing_additions.Items.FishingAdditionsItems;
 import dev.deus.fishing_additions.Recipes.RecipeInitializer;
 import dev.deus.fishing_additions.TileEntities.TileEntityFishingNetBlock;
+import dev.deus.fishing_additions.Tools.Debug.Debug;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.EntityHelper;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
+
+import static dev.deus.fishing_additions.Tools.Debug.Debug.isDebug;
 
 public class FishingAdditions implements ModInitializer, GameStartEntrypoint, RecipeEntrypoint {
 
@@ -24,9 +27,13 @@ public class FishingAdditions implements ModInitializer, GameStartEntrypoint, Re
 	@Override
 	public void onInitialize() {
 
+		isDebug = java.lang.management.ManagementFactory.getRuntimeMXBean().
+			getInputArguments().toString().contains("-agentlib:jdwp");
+
+
 		// Inicializa TileEntity
 		EntityHelper.createTileEntity(TileEntityFishingNetBlock.class, "TileEntityFishingNetBlock");
-		LOGGER.info("FishingAdditions initialized.");
+		LOGGER.info("FishingAdditions initialized. Debug: "+ isDebug);
 	}
 
 	@Override
