@@ -1,4 +1,4 @@
-package dev.deus.fishing_additions.Items.ItemModel;
+package dev.deus.fishing_additions.Items.Models;
 
 import net.minecraft.client.render.item.model.ItemModelStandard;
 import net.minecraft.core.item.Item;

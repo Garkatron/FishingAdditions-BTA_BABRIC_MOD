@@ -1,4 +1,4 @@
-package dev.deus.fishing_additions.Tools.Debug;
+package dev.deus.fishing_additions.DevTools.Debug;
 
 public class Debug {
 	private static final String RESET = "\033[0m";

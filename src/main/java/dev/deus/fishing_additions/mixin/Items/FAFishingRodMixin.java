@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
-import static dev.deus.fishing_additions.Items.LootTables.LootTables.VanilaFishingRodLootTable;
+import static dev.deus.fishing_additions.LootTables.LootTables.VanilaFishingRodLootTable;
 
 
 @Mixin(EntityBobber.class)

@@ -1,4 +1,4 @@
-package dev.deus.fishing_additions.Tools;
+package dev.deus.fishing_additions.DevTools.Utils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -12,7 +12,7 @@ public class StaticFieldsExtractor {
 		Field[] fields = clazz.getDeclaredFields();
 
 		for (Field field : fields) {
-			// Verificar si el campo es estático
+
 			if (Modifier.isStatic(field.getModifiers())) {
 				staticFieldNames.add(field.getName());
 			}

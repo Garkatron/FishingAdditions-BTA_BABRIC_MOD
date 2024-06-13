@@ -1,4 +1,4 @@
-package dev.deus.fishing_additions.Items.Utils;
+package dev.deus.fishing_additions.DevTools.Utils;
 
 import net.minecraft.core.item.material.ArmorMaterial;
 import org.jetbrains.annotations.NotNull;

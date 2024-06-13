@@ -3,6 +3,7 @@ package dev.deus.fishing_additions.Blocks;
 //import static dev.deus.fishing_additions.Config.ModConfig.newBlockID;
 
 import dev.deus.fishing_additions.Blocks.BlockModel.CustomBlockModel;
+import dev.deus.fishing_additions.Blocks.FishingNetBlock.FishingNetBlock;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.sound.BlockSounds;

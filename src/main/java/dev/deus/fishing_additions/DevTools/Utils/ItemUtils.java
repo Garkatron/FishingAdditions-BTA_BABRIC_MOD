@@ -1,13 +1,16 @@
-package dev.deus.fishing_additions.Tools;
+package dev.deus.fishing_additions.DevTools.Utils;
 
 
 import deus.rarity_lib.Interfaces.mixin.IItemRarityMixin;
 import deus.rarity_lib.RarityLevel;
-import dev.deus.fishing_additions.Items.Utils.ItemSettings;
-import dev.deus.fishing_additions.Items.Utils.ItemType;
+import dev.deus.fishing_additions.DevTools.Debug.Debug;
+import dev.deus.fishing_additions.Items.CustomClasses.SizedFood;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemArmor;
 import net.minecraft.core.item.ItemFood;
+import turniplabs.halplibe.helper.CreativeHelper;
+
+import java.lang.reflect.Field;
 
 import static dev.deus.fishing_additions.Items.FishingAdditionsItems.GenericItemBuilder;
 
@@ -100,4 +103,44 @@ public class ItemUtils {
 		((IItemRarityMixin) food).rarityLib$setRarityLevel(rarity);
 		return food;
 	}
+
+	public static ItemFood makeSizedFood(int id, String name, int sizeMM, int ticksPerHeal, double healingValueFactorPerMM, int baseHealingValue, boolean favouriteWolfMeat, int maxStackSize, RarityLevel rarity) {
+		SizedFood food = GenericItemBuilder
+			.build(new SizedFood(
+				name,
+				id,
+				sizeMM,
+				ticksPerHeal,
+				healingValueFactorPerMM,
+				baseHealingValue,
+				favouriteWolfMeat,
+				maxStackSize
+			));
+
+		((IItemRarityMixin) food).rarityLib$setRarityLevel(rarity);
+		return food;
+	}
+
+	public static void assignPriorities(Class<?> c) {
+		int initialPriority = 1001;
+		try {
+			String[] staticFieldNames = StaticFieldsExtractor.extractor(c);
+			for (String fieldName : staticFieldNames) {
+				Field field = c.getDeclaredField(fieldName);
+				field.setAccessible(true);
+				Object value = field.get(null);
+
+				if (value instanceof Item) {
+					Item item = (Item) value;
+					CreativeHelper.setPriority(item, initialPriority);
+					initialPriority++;
+					Debug.println("RARITY_CAST: " + item.getStatName());
+					Debug.println(((IItemRarityMixin)item).rarityLib$getRarityLevel().toString());
+				}
+			}
+		} catch (NoSuchFieldException | IllegalAccessException e) {
+			e.printStackTrace();
+		}
+	}
+
 }

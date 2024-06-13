@@ -1,42 +1,89 @@
+# BLOCKS
+
 tile.fishing_additions.fishing_net_block.name = Fishing Net Block
 tile.fishing_additions.fishing_net_block.desc = Automatically fishes every 5 minutes.
 
-item.fishing_additions.gold_fishing_rod.name = Gold Fishing Rod
-item.fishing_additions.gold_fishing_rod.desc = A Gold Fishing Rod
+# TOOLS
 
-item.fishing_additions.iron_fishing_rod.name = Iron Fishing Rod
-item.fishing_additions.iron_fishing_rod.desc = A Iron Fishing Rod
+item.fishing_additions.fishing_rod.gold.name = Gold Fishing Rod
+item.fishing_additions.fishing_rod.gold.desc = A Gold Fishing Rod
 
-item.fishing_additions.steel_fishing_rod.name = Steel Fishing Rod
-item.fishing_additions.steel_fishing_rod.desc = A Steel Fishing Rod
+item.fishing_additions.fishing_rod.iron.name = Iron Fishing Rod
+item.fishing_additions.fishing_rod.iron.desc = A Iron Fishing Rod
 
+item.fishing_additions.fishing_rod.steel.name = Steel Fishing Rod
+item.fishing_additions.fishing_rod.steel.desc = A Steel Fishing Rod
+
+# INGREDIENTS
 item.fishing_additions.hydra_scale.name = Hýdra scale
 item.fishing_additions.hydra_scale.desc = What?!
 
-item.fishing_additions.cod_fish.name = Cod fish
-item.fishing_additions.cod_fish.desc = A different fish
+# Fish Items
+item.fishing_additions.cod.name = Cod Fish
+item.fishing_additions.cod.desc = A different fish
 
-item.fishing_additions.cooked_cod.name = Cooked cod fish
-item.fishing_additions.cooked_cod.desc = A different fish but cooked
+item.fishing_additions.cod.medium.name = Medium Cod
+item.fishing_additions.cod.medium.desc = A medium-sized cod fish
+item.fishing_additions.cod.large.name = Large Cod
+item.fishing_additions.cod.large.desc = A large cod fish
 
-item.fishing_additions.salmon.name = Salmon fish
+item.fishing_additions.cod.cooked.name = Cooked Cod Fish
+item.fishing_additions.cod.cooked.desc = A different fish but cooked
+item.fishing_additions.cod.cooked.medium.name = Medium Cooked Cod
+item.fishing_additions.cod.cooked.medium.desc = Medium-sized cooked cod fish
+item.fishing_additions.cod.cooked.large.name = Large Cooked Cod
+item.fishing_additions.cod.cooked.large.desc = Large cooked cod fish
+
+# Salmon Items
+item.fishing_additions.salmon.name = Salmon Fish
 item.fishing_additions.salmon.desc = A fish
 
-item.fishing_additions.cooked_salmon.name = Cooked salmon fish
-item.fishing_additions.cooked_salmon.desc = A cooked salmon fish
+item.fishing_additions.salmon.medium.name = Medium Salmon
+item.fishing_additions.salmon.medium.desc = A medium-sized salmon fish
+item.fishing_additions.salmon.large.name = Large Salmon
+item.fishing_additions.salmon.large.desc = A large salmon fish
 
-item.fishing_additions.gold_fish.name = Gold fish
+item.fishing_additions.salmon.cooked.name = Cooked Salmon Fish
+item.fishing_additions.salmon.cooked.desc = A cooked salmon fish
+item.fishing_additions.salmon.cooked.medium.name = Medium Cooked Salmon
+item.fishing_additions.salmon.cooked.medium.desc = Medium-sized cooked salmon fish
+item.fishing_additions.salmon.cooked.large.name = Large Cooked Salmon
+item.fishing_additions.salmon.cooked.large.desc = Large cooked salmon fish
+
+# Goldfish Items
+item.fishing_additions.gold_fish.name = Goldfish
 item.fishing_additions.gold_fish.desc = Timmy: Are you Cosmo?
 
-item.fishing_additions.cooked_gold_fish.name = What?!
-item.fishing_additions.cooked_gold_fish.desc = What?!
+item.fishing_additions.gold_fish.medium.name = Medium Goldfish
+item.fishing_additions.gold_fish.medium.desc = Medium-sized goldfish
+item.fishing_additions.gold_fish.large.name = Large Goldfish
+item.fishing_additions.gold_fish.large.desc = Large goldfish
 
+item.fishing_additions.gold_fish.cooked.name = Cooked Goldfish
+item.fishing_additions.gold_fish.cooked.desc = What?!
+item.fishing_additions.gold_fish.cooked.medium.name = Medium Cooked Goldfish
+item.fishing_additions.gold_fish.cooked.medium.desc = Medium-sized cooked goldfish
+item.fishing_additions.gold_fish.cooked.large.name = Large Cooked Goldfish
+item.fishing_additions.gold_fish.cooked.large.desc = Large cooked goldfish
+
+# Pufferfish Items
 item.fishing_additions.pufferfish.name = Pufferfish
 item.fishing_additions.pufferfish.desc = Poison
 
-item.fishing_additions.tropical_fish.name = Tropical fish
+item.fishing_additions.pufferfish.medium.name = Medium Pufferfish
+item.fishing_additions.pufferfish.medium.desc = Medium-sized pufferfish
+item.fishing_additions.pufferfish.large.name = Large Pufferfish
+item.fishing_additions.pufferfish.large.desc = Large pufferfish
+
+# Tropical Fish Items
+item.fishing_additions.tropical_fish.name = Tropical Fish
 item.fishing_additions.tropical_fish.desc = Nemo?!
 
-item.fishing_additions.cooked_fish_soup.name = Cooked fish soup
-item.fishing_additions.cooked_fish_soup.desc = A awful soup
+item.fishing_additions.tropical_fish.medium.name = Medium Tropical Fish
+item.fishing_additions.tropical_fish.medium.desc = Medium-sized tropical fish
+item.fishing_additions.tropical_fish.large.name = Large Tropical Fish
+item.fishing_additions.tropical_fish.large.desc = Large tropical fish
 
+# Cooked Fish Soup
+item.fishing_additions.cooked_fish_soup.name = Cooked Fish Soup
+item.fishing_additions.cooked_fish_soup.desc = An awful soup

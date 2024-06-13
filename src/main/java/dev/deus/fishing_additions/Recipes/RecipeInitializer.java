@@ -1,6 +1,6 @@
 package dev.deus.fishing_additions.Recipes;
 
-import dev.deus.fishing_additions.Tools.Debug.Debug;
+import dev.deus.fishing_additions.DevTools.Debug.Debug;
 import net.minecraft.core.item.Item;
 import turniplabs.halplibe.helper.RecipeBuilder;
 
@@ -59,8 +59,19 @@ public class RecipeInitializer {
 		RecipeBuilder.Furnace(MOD_ID).setInput(salmon).create("CookedSalmonRecipe",cooked_salmon.getDefaultStack());
 		RecipeBuilder.Furnace(MOD_ID).setInput(gold_fish).create("CookedGoldFishRecipe",cooked_gold_fish.getDefaultStack());
 		RecipeBuilder.Furnace(MOD_ID).setInput(cod_fish).create("CookedCodFishRecipe",cooked_cod.getDefaultStack());
-		// RecipeBuilder.Furnace(MOD_ID).setInput().create("CookedSalmonRecipe",salmon.getDefaultStack());
-		// RecipeBuilder.Furnace(MOD_ID).setInput(salmon).create("CookedSalmonRecipe",salmon.getDefaultStack());
+
+		RecipeBuilder.Furnace(MOD_ID).setInput(salmon).create("CookedSalmonRecipe", cooked_salmon.getDefaultStack());
+		RecipeBuilder.Furnace(MOD_ID).setInput(salmon_medium).create("CookedMediumSalmonRecipe", cooked_salmon_medium.getDefaultStack());
+		RecipeBuilder.Furnace(MOD_ID).setInput(salmon_large).create("CookedLargeSalmonRecipe", cooked_salmon_large.getDefaultStack());
+
+		RecipeBuilder.Furnace(MOD_ID).setInput(cod_fish).create("CookedCodFishRecipe", cooked_cod.getDefaultStack());
+		RecipeBuilder.Furnace(MOD_ID).setInput(cod_fish_medium).create("CookedMediumCodFishRecipe", cooked_cod_medium.getDefaultStack());
+		RecipeBuilder.Furnace(MOD_ID).setInput(cod_fish_large).create("CookedLargeCodFishRecipe", cooked_cod_large.getDefaultStack());
+
+		RecipeBuilder.Furnace(MOD_ID).setInput(gold_fish).create("CookedGoldfishRecipe", cooked_gold_fish.getDefaultStack());
+		RecipeBuilder.Furnace(MOD_ID).setInput(gold_fish_medium).create("CookedMediumGoldfishRecipe", cooked_gold_fish_medium.getDefaultStack());
+		RecipeBuilder.Furnace(MOD_ID).setInput(gold_fish_large).create("CookedLargeGoldfishRecipe", cooked_gold_fish_large.getDefaultStack());
+
 
 
 

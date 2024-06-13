@@ -1,4 +1,4 @@
-package dev.deus.fishing_additions.GUIs;
+package dev.deus.fishing_additions.Blocks.FishingNetBlock;
 
 import net.minecraft.client.gui.GuiContainer;
 import net.minecraft.core.player.inventory.ContainerChest;
