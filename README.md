@@ -1,37 +1,50 @@
-# Example Mod
+### Presentation
 
-Template for making Babric mods for BTA!
+**Hi! I'm Garkatron. My love for Better Than Adventure inspired me to enhance the fishing experience in Minecraft, which is why I created this mod.**
 
-**Note: *DO NOT fork this repository unless you want to contribute!***
+### Additions
 
-## Prerequisites
-- JDK for Java 17 ([Eclipse Temurin](https://adoptium.net/temurin/releases/) recommended)
-- [Intellij IDEA](https://www.jetbrains.com/idea/download/) (Scroll down for the free community edition)
-- Minecraft Development plugin (Optional, but highly recommended)
+#### **Blocks**
+- **Fishing Net Block**: Automatically catches fish every five minutes.
 
-## Setup instructions
-   
+#### **Items**
 
-1. Click the `Use this template` button on this repo's page above. Choose `Create a new repository`, you will be redirected to a new page. Enter your repo's name and description, and hit `Create repository`.  
-   To get your project, open IntelliJ IDEA and click `Get from VCS`. Select `Repository URL` and enter your repo's url
+##### **Tools**
+- **New Fishing Rods**: Available in Gold, Iron, and Steel.
+- **Enhanced Loot**: New and exciting rewards for using the vanilla fishing rod.
 
-2. After the project has finished importing, close it and open it again.  
-   If that does not work, open the right sidebar with `Gradle` on it, open `Tasks` > `fabric` and run `ideaSyncTask`.
+##### **Food**
+# Fishes Heal Amount
+## Temporal
 
-3. Create a new run configuration by going in `Run > Edit Configurations`.  
-   Then click on the plus icon and select Gradle. In the `Tasks and Arguments` field enter `build`.  
-   Running it will build your finished jar files and put them in `build/libs/`.
+| Fish                     | Size    | Hearts    | Probability (%) |
+|--------------------------|---------|-----------|-----------------|
+| Pufferfish               | 300mm   | 3         | 13              |
+| Medium Pufferfish        | 350mm   | 3.5       | 5               |
+| Large Pufferfish         | 400mm   | 4         | 5               |
+| Tropical Fish            | 150mm   | 1.5       | 25              |
+| Medium Tropical Fish     | 175mm   | 1.75      | 10              |
+| Large Tropical Fish      | 200mm   | 2         | 10              |
+| Salmon                   | 1500mm  | 15        | 60              |
+| Medium Salmon            | 1700mm  | 17        | 20              |
+| Large Salmon             | 1900mm  | 19        | 20              |
+| Cod Fish                 | 2000mm  | 20        | 13              |
+| Medium Cod Fish          | 2200mm  | 22        | 5               |
+| Large Cod Fish           | 2400mm  | 24        | 5               |
+| Goldfish                 | 200mm   | 2         | 60              |
+| Medium Goldfish          | 250mm   | 2.5       | 20              |
+| Large Goldfish           | 300mm   | 3         | 20              |
 
-4. Lastly, open `File` > `Settings` and head to `Build, Execution, Development` > `Build Tools` > `Gradle`.  
-   Make sure `Build and run using` and `Run tests using` is set to `Gradle`.
-
-5. Done! Now, all that's left is to change every mention of `examplemod` and `turniplabs` to your own mod id and mod group, respectively. Happy modding!
-
-## Tips
-
-1. If you haven't already you should join the BTA modding discord! https://discord.gg/FTUNJhswBT
-2. You can set your username when launching the client run configuration by setting `--username <username>` in your program arguments.
-3. When launching the server run configuration you may want to remove the `nogui` program argument in order to see the regular server GUI.
-4. In Intellij you can double press shift or press ctrl+N to search class files, change the search from the default `Project Files` to `All Places` you can easily explore the classes for you dependencies and even BTA itself.
-5. In Intellij if ctrl+left click on a field or method you can quickly get information on when and where that field or method is assign or used.
-
+### Cooked Variants Table
+| Cooked                 | Size    | Hearts  |
+|------------------------|---------|---------|
+| Cooked Salmon          | 1500mm  | 15      |
+| Medium Cooked Salmon   | 1700mm  | 17      |
+| Large Cooked Salmon    | 1900mm  | 19      |
+| Cooked Cod             | 2000mm  | 20      |
+| Medium Cooked Cod      | 2200mm  | 22      |
+| Large Cooked Cod       | 2400mm  | 24      |
+| Cooked Goldfish        | 250mm   | 2.5     |
+| Medium Cooked Goldfish | 300mm   | 3       |
+| Large Cooked Goldfish  | 350mm   | 3.5     |
+| Cooked Fish Soup       | -       | 7       |
