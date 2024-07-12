@@ -9,6 +9,7 @@ public class Debug {
 	public static boolean isDebug = false;
 
 	public static void println(String x) {
+	    if (!isDebug) return;
 		System.out.println(BLUE + "[Debug]" + RESET);
 		System.out.println(YELLOW + "----------------------------------------------------------" + RESET);
 		System.out.println(CYAN + x + RESET);
@@ -16,6 +17,7 @@ public class Debug {
 	}
 
 	public static void println(int x) {
+	    if (!isDebug) return;
 		System.out.println(BLUE + "[Debug]" + RESET);
 		System.out.println(YELLOW + "----------------------------------------------------------" + RESET);
 		System.out.println(CYAN + x + RESET);
@@ -23,6 +25,7 @@ public class Debug {
 	}
 
 	public static void println(Boolean x) {
+	    if (!isDebug) return;
 		System.out.println(BLUE + "[Debug]" + RESET);
 		System.out.println(YELLOW + "----------------------------------------------------------" + RESET);
 		System.out.println(CYAN + x + RESET);
@@ -30,6 +33,7 @@ public class Debug {
 	}
 
 	public static void println(float x) {
+	    if (!isDebug) return;
 		System.out.println(BLUE + "[Debug]" + RESET);
 		System.out.println(YELLOW + "----------------------------------------------------------" + RESET);
 		System.out.println(CYAN + x + RESET);
@@ -37,6 +41,7 @@ public class Debug {
 	}
 
 	public static void println(double x) {
+	    if (!isDebug) return;
 		System.out.println(BLUE + "[Debug]" + RESET);
 		System.out.println(YELLOW + "----------------------------------------------------------" + RESET);
 		System.out.println(CYAN + x + RESET);

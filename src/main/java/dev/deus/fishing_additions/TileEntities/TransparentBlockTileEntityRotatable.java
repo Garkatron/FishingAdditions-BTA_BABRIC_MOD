@@ -17,10 +17,12 @@ public class TransparentBlockTileEntityRotatable extends BlockTileEntityRotatabl
 		this.renderInside = renderInside;
 	}
 
+    @Override
 	public boolean isSolidRender() {
 		return false;
 	}
 
+    @Override
 	public boolean shouldSideBeRendered(WorldSource blockAccess, int x, int y, int z, int side) {
 		return !this.renderInside && blockAccess.getBlockId(x, y, z) == this.id ? false : super.shouldSideBeRendered(blockAccess, x, y, z, side);
 	}

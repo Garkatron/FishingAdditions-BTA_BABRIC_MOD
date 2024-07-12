@@ -24,8 +24,8 @@ public class CustomItemFishingRod extends Item {
 		this.setMaxStackSize(1);
 	}
 
-
-	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entityplayer) {
+    @Override
+	public ItemStack onUseItem(ItemStack itemstack, World world, EntityPlayer entityplayer) {
 		if (entityplayer.bobberEntity != null) {
 			int damage = entityplayer.bobberEntity.yoink();
 			itemstack.damageItem(damage, entityplayer);

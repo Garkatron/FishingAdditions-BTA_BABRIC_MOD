@@ -4,6 +4,7 @@ import dev.deus.fishing_additions.TileEntities.TransparentBlockTileEntityRotatab
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.entity.player.EntityPlayer;
+import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.player.inventory.IInventory;
 import net.minecraft.core.world.World;
@@ -31,7 +32,7 @@ public class FishingNetBlock extends TransparentBlockTileEntityRotatable {
 
 
 	@Override
-	public boolean blockActivated(World world, int x, int y, int z, EntityPlayer entityplayer) {
+	public boolean onBlockRightClicked(World world, int x, int y, int z, EntityPlayer entityplayer, Side side, double xPlaced, double yPlaced) {
 
 		IInventory chest = (TileEntityFishingNetBlock) world.getBlockTileEntity(x, y, z);
 

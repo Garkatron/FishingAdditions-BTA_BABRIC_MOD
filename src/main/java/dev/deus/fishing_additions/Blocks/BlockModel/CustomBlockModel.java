@@ -21,10 +21,10 @@ public class CustomBlockModel<T extends Block> extends BlockModelStandard<T> {
 	}
 
 	@Override
-	public void renderBlockOnInventory(Tessellator tessellator, int metadata, float brightness, float alpha) {
+	public void renderBlockOnInventory(Tessellator tessellator, int metadata, float brightness, float alpha, Integer lightmapCoordinates) {
 		// Dibujar el cubo inferior del modelo con límites de bloque normal
 		block.setBlockBounds(0, 0, 0, 1, 1, 1);
 
-		super.renderBlockOnInventory(tessellator, metadata, brightness, alpha);
+		super.renderBlockOnInventory(tessellator, metadata, brightness, alpha, lightmapCoordinates);
 	}
 }
