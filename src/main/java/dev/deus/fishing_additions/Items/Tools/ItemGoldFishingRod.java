@@ -2,6 +2,8 @@ package dev.deus.fishing_additions.Items.Tools;
 
 import dev.deus.fishing_additions.Items.CustomClasses.CustomItemFishingRod;
 
+import static dev.deus.fishing_additions.LootTables.LootTables.GoldFishingRodLootTable;
+
 public class ItemGoldFishingRod extends CustomItemFishingRod {
 
 
@@ -9,7 +11,7 @@ public class ItemGoldFishingRod extends CustomItemFishingRod {
 		super(name, id);
 		this.setMaxDamage(128);
 		this.setMaxStackSize(1);
-		//this.setLootTable(GoldFishingRodLootTable);
+		this.setLootTable(GoldFishingRodLootTable);
 
 	}
 

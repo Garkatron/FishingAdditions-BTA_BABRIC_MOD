@@ -11,10 +11,8 @@ import static dev.deus.fishing_additions.LootTables.LootTables.VanilaFishingRodL
 
 @Mixin(EntityBobber.class)
 public class FAFishingRodMixin {
-
-	@ModifyArg(method = "yoink()I", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/entity/EntityItem;<init>(Lnet/minecraft/core/world/World;DDDLnet/minecraft/core/item/ItemStack;)V"), index = 4,remap = false)
+	@ModifyArg(method = "yoink()I", at = @At(value = "INVOKE", target = "Lnet/minecraft/core/entity/EntityItem;<init>(Lnet/minecraft/core/world/World;DDDLnet/minecraft/core/item/ItemStack;)V"), index = 4, remap = false)
 	private ItemStack modifyItemStack(ItemStack originalStack) {
-
 		return VanilaFishingRodLootTable.getRandomItemWithProbability();
 	}
 
