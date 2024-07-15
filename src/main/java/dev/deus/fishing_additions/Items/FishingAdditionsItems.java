@@ -141,10 +141,11 @@ public class FishingAdditionsItems {
 
 			ItemCreativeFishingRod t = new ItemCreativeFishingRod("creative_fishing_rod", config.newItemID());
 			t.setLootTable(LootTables.VanilaFishingRodLootTable);
+
 			creative_fishing_rod = generic_item_builder.build(t);
 			CreativeHelper.setPriority(creative_fishing_rod, 1000);
 
-			IItemRarityMixin mixinItem = creative_fishing_rod;
+			IItemRarityMixin mixinItem = (IItemRarityMixin) creative_fishing_rod;
 			mixinItem.rarityLib$setRarityLevel(RarityLevel.COMMON);
 
 			Debug.println("Creative: " + creative_fishing_rod.id);
