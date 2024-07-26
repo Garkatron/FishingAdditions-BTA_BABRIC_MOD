@@ -9,11 +9,9 @@ public class CustomBlockModel<T extends Block> extends BlockModelStandard<T> {
 		super(block);
 	}
 
-	// Assuming these methods are custom and not intended to override
-	// any methods from the superclass
 	public boolean render(Tessellator tessellator, int x, int y, int z) {
 		boolean flag = false;
-		// Dibujar el cubo inferior del modelo con límites de bloque normal
+
 		block.setBlockBounds(0, 0, 0, 1, 1, 1);
 		flag = this.renderStandardBlock(tessellator, this.block, x, y, z);
 
@@ -22,7 +20,7 @@ public class CustomBlockModel<T extends Block> extends BlockModelStandard<T> {
 	}
 
 	public void renderBlockOnInventory(Tessellator tessellator, int metadata, float brightness, float alpha) {
-		// Dibujar el cubo inferior del modelo con límites de bloque normal
+
 		block.setBlockBounds(0, 0, 0, 1, 1, 1);
 
 		super.renderBlockOnInventory(tessellator, metadata, brightness, 0);
